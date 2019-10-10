@@ -1,6 +1,6 @@
 CUDA_VISIBLE_DEVICES=3 python gan.py --dataset ./data/mcql_processed/ \
   --prefix distractorQA\
-  --num_epochs 100\
+  --num_epochs 1\
   --batch_size 64\
   --pools_size 64\
   --gan_k 16\
