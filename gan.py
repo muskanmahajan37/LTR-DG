@@ -336,10 +336,9 @@ def main():
                     restore_op, feed_dict = tf.contrib.framework.assign_from_checkpoint(
                         tf.train.latest_checkpoint(FLAGS.pretrained_model_path),
                         var_list,
-                        True
+                        ignore_missing_vars=True
                     )
                     sess.run(restore_op, feed_dict)
-
                 # initial evaluation
                 saver = tf.train.Saver(max_to_keep=None)
                 # evaluation(sess, discriminator, log, saver, 0, 'dev', False)
