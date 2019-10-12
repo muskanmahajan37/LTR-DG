@@ -82,7 +82,7 @@ def read_raw(dataset):
     raw_dict = {}  # pos_index for each answer grouped by questions
     with open('{}/train.data'.format(dataset), 'r') as fin:
         for i, line in enumerate(fin):
-            if i < 1000:
+            if i < 3000:
                 items = line.strip().lower().split(' ')
                 if items[0] == '1':  # valide q-a pair [label, q, a, d+]
                     raw.append(items)
