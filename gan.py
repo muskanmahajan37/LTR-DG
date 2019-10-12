@@ -275,7 +275,7 @@ def evaluation(sess, model, log, saver, num_epochs=0, split='dev',
 
 def main():
     with tf.Graph().as_default():
-        with tf.device("/gpu:1"):
+        with tf.device("/gpu:0"):
             # embeddings
             param = None
             if len(FLAGS.pretrained_embeddings_path) > 0:
